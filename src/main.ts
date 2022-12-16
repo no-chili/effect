@@ -1,7 +1,6 @@
-export type Chili={
-  name:string
-}
+import { time } from './time'
+export * from './time'
 
-export const chili:Chili={
-  name:'chili',
+export default {
+  time
 }
