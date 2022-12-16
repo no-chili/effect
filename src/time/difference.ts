@@ -1,5 +1,5 @@
-type RetDate='year'|'month'|'day'|'hour'|'minute'|'second'
-type Way='ceil'|'floor'
+export type RetDate='year'|'month'|'day'|'hour'|'minute'|'second'
+export type Way='ceil'|'floor'
 function difference(currentDate:Date|string,targetDate:Date|string,retDate:RetDate,way:Way):number{
   
   // 是否包含闰年

@@ -1,8 +1,8 @@
 // time 时间
 // rule 规则 YYYY-MM-DD 
-type Rule='YYYY-MM-DD HH-mm-ss'|'YYYY-MM-DD'|'YYYY-MM'|'MM-DD'|'HH-mm-ss'|'HH-mm'|'mm-ss'
+export type Rule='YYYY-MM-DD HH-mm-ss'|'YYYY-MM-DD'|'YYYY-MM'|'MM-DD'|'HH-mm-ss'|'HH-mm'|'mm-ss'
 export function format(rule:Rule,time?:Date):string{
-  const TIME:Date = time??new Date()
+  const TIME:Date = time||new Date()
   const YEAR = TIME.getFullYear()
   const MONTH = TIME.getMonth()+1<10?0+''+(TIME.getMonth()+1):TIME.getMonth()+1
   const DATE = TIME.getDate()<10?0+''+TIME.getDate():TIME.getDate()
