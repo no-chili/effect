@@ -1,0 +1,39 @@
+{
+  "name": "effect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no-chili/effect.git"
+  },
+  "keywords": [
+    "effect",
+    "js",
+    "function",
+    "klash"
+  ],
+  "author": "no-chili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no-chili/effect/issues"
+  },
+  "homepage": "https://github.com/no-chili/effect#readme",
+  "type": "module",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "path": "^0.12.7",
+    "rollup-plugin-typescript2": "^0.34.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-strip": "^3.0.1",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  }
+}
