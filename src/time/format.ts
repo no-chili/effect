@@ -28,6 +28,6 @@ export function format(rule:Rule,time?:Date):string{
     return HOUR+'-'+MINUTE
   }
   if(rule==='mm-ss'){
-    return MONTH+'-'+SECOND
+    return MINUTE+'-'+SECOND
   }
 }

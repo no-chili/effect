@@ -12,7 +12,7 @@ import  strip from '@rollup/plugin-strip'
 export default {
   input: 'src/main.ts',
   plugins:[
-    terser(),
+    // terser(),
     typescript({
       exclude: "node_modules/**",
     }),
@@ -31,5 +31,5 @@ export default {
       file: 'package/lib/bundle.cjs.js',
       sourcemap: true
     },
-  ],
+  ]
 };

@@ -1,8 +1,8 @@
 {
-  "name": "effect",
+  "name": "js-effect",
   "version": "1.0.0",
   "description": "js实用工具函数",
-  "main": "bundle.esm.js",
+  "main": "lib/bundle.esm.js",
   "directories": {
     "lib": "lib"
   },
@@ -17,12 +17,13 @@
     "effect",
     "js",
     "function",
-    "klash"
+    "js-effect"
   ],
   "author": "no-chili",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/no-chili/effect/issues"
   },
-  "homepage": "https://github.com/no-chili/effect#readme"
+  "homepage": "https://github.com/no-chili/effect#readme",
+  "type": "module"
 }
