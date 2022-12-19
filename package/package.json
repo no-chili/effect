@@ -1,9 +1,9 @@
 {
   "name": "js-effect",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "js实用工具函数",
-  "main": "lib/bundle.esm.js",
-  "types": "lib/main.d.ts",
+  "main": "./lib/bundle.esm.js",
+  "types": "./lib/main.d.ts",
   "directories": {
     "lib": "lib"
   },
