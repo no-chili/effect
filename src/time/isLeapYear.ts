@@ -4,4 +4,4 @@ export function isLeapYear(date:Date|string):boolean{
     return true
   }
   return false
-} 
+}

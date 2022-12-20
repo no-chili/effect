@@ -1,3 +1,5 @@
 export * from './time'
 export * from './common'
 export * from './image'
+export * from './dom'
+export * from './bom'

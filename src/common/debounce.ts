@@ -1,11 +1,12 @@
-export function debounce(fn:Function,time:number):Function{
+export function debounce(fn:Function,time:number,immediate:boolean):Function{
   let timer=null
   return ()=>{
     if(timer){
       clearInterval(timer)
     }
+    immediate&&timer==null&&fn()
     timer = setTimeout(() => {
-      fn()
+      !immediate&&fn()
       timer=null
     }, time);
   }

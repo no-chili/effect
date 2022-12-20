@@ -1,10 +1,8 @@
 export type RetDate='year'|'month'|'day'|'hour'|'minute'|'second'
 export type Way='ceil'|'floor'
 function difference(currentDate:Date|string,targetDate:Date|string,retDate:RetDate,way:Way):number{
-  
   // 是否包含闰年
   // 是否包含闰月
-
   const currentDateTime=new Date(currentDate).getTime()
   const targetDateTime=new Date(targetDate).getTime()
   const long=targetDateTime-currentDateTime
