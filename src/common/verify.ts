@@ -8,4 +8,5 @@ export function verify(value,rule:Rule|Rules,errMsg:string){
       return errMsg
     }
   }
+  return true
 }
