@@ -1,4 +1,4 @@
-type Rule = (value:any)=>boolean
+type Rule = (value:any,...arg)=>boolean
 type Rules = Array<Rule>
 export function verify(value,rule:Rule|Rules,errMsg:string){
   const ruleList = Array.isArray(rule)?rule:[rule]
