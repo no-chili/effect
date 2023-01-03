@@ -1,6 +1,6 @@
 {
   "name": "js-effect",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "js实用工具函数",
   "main": "./lib/bundle.esm.js",
   "types": "./lib/main.d.ts",

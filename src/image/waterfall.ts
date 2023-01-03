@@ -1,3 +1,8 @@
+/*
+ * @Author: no-chili 18875854140@163.com
+ * @LastEditTime: 2023-01-03 14:20:12
+ * @Description: 图片瀑布流计算
+ */
 type ImageList=Array<{
   width:number,
   height:number,
@@ -11,10 +16,14 @@ type NewImageList=Array<{
   top:number,
   left:number
 }>
-// el 元素 或者 盒子宽
-// column 列
-// imageList 图片列表 
-// gap 间距
+
+/**
+ * @description: 
+ * @param {HTMLElement} el 元素 或者 盒子宽
+ * @param {number} column 列
+ * @param {ImageList} imageList 图片列表
+ * @param {number} gap 间距
+ */
 export function waterfall(el:HTMLElement|number,column:number,imageList:ImageList,gap?:number){
   // el为元素获取宽 否则直接获取宽
   const width=el instanceof HTMLElement?getComputedStyle(el).width.split('px'):el
