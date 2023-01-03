@@ -1,4 +1,4 @@
-export function hasEmpty(value){
+export function hasEmpty(value:object){
   let flag=false
   for (let index = 0; index < Object.keys(value).length; index++) {
     const key = Object.keys(value)[index];

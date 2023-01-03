@@ -11,9 +11,19 @@ type NewImageList=Array<{
   top:number,
   left:number
 }>
-export function waterfall(el:HTMLElement,column:number,imageList:ImageList,gap?:number,imageClass?:string,callback?:Function){
-  const width=getComputedStyle(el).width.split('px')
-  const containerWidth=width.length>1?parseInt(width[0])-gap*(column+1):0
+// el 元素 或者 盒子宽
+// column 列
+// imageList 图片列表 
+// gap 间距
+export function waterfall(el:HTMLElement|number,column:number,imageList:ImageList,gap?:number){
+  // el为元素获取宽 否则直接获取宽
+  const width=el instanceof HTMLElement?getComputedStyle(el).width.split('px'):el
+  let containerWidth
+  if(el instanceof HTMLElement){
+    containerWidth=getComputedStyle(el).width.split('px').length>1?parseInt(width[0])-gap*(column+1):0
+  }else{
+    containerWidth=width
+  }
   const newImageList:NewImageList=[]
   if(containerWidth<=0)return
   // 单张图片
@@ -37,28 +47,5 @@ export function waterfall(el:HTMLElement,column:number,imageList:ImageList,gap?:
     })
     heightArray[column]+=ratio*image.height+gap
   }
-  // 挂载图片
-  el.style.position='relative'
-  for (let index = 0; index < newImageList.length; index++) {
-    const element = newImageList[index]
-    const div = document.createElement('div')
-    const image =document.createElement('img')
-    image.src=element.url
-    div.style.position='absolute'
-    div.style.width=element.width+'px',
-    div.style.height=element.height+'px'
-    div.style.top=element.top+'px'
-    div.style.left=element.left+'px'
-    image.style.width=element.width+'px',
-    image.style.height=element.height+'px'
-    image.style.top=element.top+'px'
-    image.style.left=element.left+'px'
-    div.style.overflow='hidden'
-    imageClass&&image.classList.add(imageClass)
-    callback&&div.addEventListener('click',()=>{
-      callback()
-    })
-    div.appendChild(image)
-    el.appendChild(div)
-  }
+  return newImageList
 }
