@@ -26,5 +26,10 @@
     "url": "https://github.com/no-chili/effect/issues"
   },
   "homepage": "https://github.com/no-chili/effect#readme",
-  "type": "module"
+  "type": "module",
+  "exports": {
+    "require": "./lib/bundle.cjs",
+    "import": "./lib/bundle.esm"
+   }
+  }
 }
