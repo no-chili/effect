@@ -1,3 +1,8 @@
+/*
+ * @Author: no-chili 18875854140@163.com
+ * @LastEditTime: 2023-01-11 12:59:05
+ * @Description: 监听页面滚动，使之滚动距离为一个屏幕高度
+ */
 const debounce=(fn,time)=>{
   let timeid=null
   return (e)=>{
@@ -27,6 +32,10 @@ const scroll=debounce((event)=>{
     // 滚动页面
     window.scrollTo({top:scrollY,behavior:"smooth"});
 },500)
+/**
+ * @description: 使用后如需去除需要调用unmount停止监听
+ * @return {*}
+ */
 export function pageScroll(){
   // 监听页面滚动事件
   window.addEventListener('wheel',scroll,{passive:false})

@@ -1,4 +1,14 @@
+/*
+ * @Author: no-chili 18875854140@163.com
+ * @LastEditTime: 2023-01-11 13:00:33
+ * @Description: 复制文本到剪贴板
+ */
 type Value=string|HTMLElement
+/**
+ * @description: 
+ * @param {Value} value 文本或者有innerText的元素
+ * @return {*}
+ */
 export function copy(value:Value){
   const text=value instanceof HTMLElement?value.innerText:value
   if(navigator.clipboard){
@@ -11,3 +21,4 @@ export function copy(value:Value){
     document.execCommand("Copy");
   } 
 }
+

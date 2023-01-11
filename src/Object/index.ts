@@ -1,12 +1,10 @@
 /*
 * @Author: no-chili 18875854140@163.com
- * @LastEditTime: 2023-01-03 15:27:20
+ * @LastEditTime: 2023-01-11 14:19:12
 * @Description: 
 */
-import { clone } from "./clone"
-import { deepClone } from "./deepClone"
+import { isObject } from './isObject';
 
 export default {
-  clone,
-  deepClone
+  isObject
 }

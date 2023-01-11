@@ -1,15 +1,15 @@
 /*
  * @Author: no-chili 18875854140@163.com
- * @LastEditTime: 2023-01-03 14:20:12
+ * @LastEditTime: 2023-01-11 15:00:29
  * @Description: 图片瀑布流计算
  */
-type ImageList=Array<{
+export type ImageList=Array<{
   width:number,
   height:number,
   url:string,
   [propName:string]:any
 }>
-type NewImageList=Array<{
+export type NewImageList=Array<{
   width:number,
   height:number,
   url:string,

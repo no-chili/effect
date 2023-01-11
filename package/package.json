@@ -1,6 +1,6 @@
 {
   "name": "js-effect",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "js实用工具函数",
   "main": "./lib/bundle.esm.js",
   "types": "./lib/main.d.ts",
@@ -28,8 +28,6 @@
   "homepage": "https://github.com/no-chili/effect#readme",
   "type": "module",
   "exports": {
-    "require": "./lib/bundle.cjs",
-    "import": "./lib/bundle.esm"
+    "require": "./lib/bundle.cjs"
    }
-  }
 }
