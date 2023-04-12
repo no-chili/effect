@@ -28,6 +28,7 @@
   "homepage": "https://github.com/no-chili/effect#readme",
   "type": "module",
   "exports": {
-    "require": "./lib/bundle.cjs"
+    "require": "./lib/bundle.cjs",
+    "import":"./lib/bundle.mjs"
    }
 }
